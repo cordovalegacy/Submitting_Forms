@@ -32,28 +32,29 @@ const Form = () => {
                     value={firstName}
                     onChange={(e) => { setFirstName(e.target.value) }}
                 />
-                {firstName.length <= 2 ? <span>{errors.firstName}</span> :null}
+                {firstName.length <= 2 && firstName.length > 0 ? <span>{errors.firstName}</span> :null}
                 <label>Last Name: </label>
                 <input
                     type="text"
+                    id='text'
                     value={lastName}
                     onChange={(e) => { setLastName(e.target.value) }}
                 />
-                {lastName.length <= 2 ? <span>{errors.lastName}</span> :null}
+                {lastName.length <= 2 && lastName.length > 0 ? <span>{errors.lastName}</span> :null}
                 <label>Email Address: </label>
                 <input
                     type="email"
                     value={email}
                     onChange={(e) => { setEmail(e.target.value) }}
                 />
-                {email.length <= 5 ? <span>{errors.email}</span> :null}
+                {email.length <= 5 && email.length > 0 ? <span>{errors.email}</span> :null}
                 <label>Password: </label>
                 <input
                     type="password"
                     value={password}
                     onChange={(e) => { setPassword(e.target.value) }}
                 />
-                {password.length <= 8 ? <span>{errors.passwordLength}</span> :null}
+                {password.length <= 8 && password.length > 0 ? <span>{errors.passwordLength}</span> :null}
                 <label>Confirm Password: </label>
                 <input
                     type="password"
